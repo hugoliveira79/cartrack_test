@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "8611f259-cdd1-4d63-ac21-8559fd3f06dd",
+		"name": "cartrack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET_USER_DETAIL",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api.php?area=detail&id=34",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "area",
+							"value": "detail"
+						},
+						{
+							"key": "id",
+							"value": "34"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "INSERT_USER_DETAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Ana Saraiva\",\r\n    \"address\" : \"Almada\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api.php?area=insert",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "area",
+							"value": "insert"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_USER_DETAIL",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 33\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api.php?area=delete",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "area",
+							"value": "delete"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE_USER_DETAIL",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":34,\r\n    \"name\" : \"John Smith\",\r\n    \"address\" : \"Miami\"\r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api.php?area=update",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "area",
+							"value": "update"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_ALL_USERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api.php?area=allUsers",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "area",
+							"value": "allUsers"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,4 +1,4 @@
-# cartrack_test
+# cartrack tech challenge
 
 ## scope
 This is a possible solution for the Cartrack Tech challenge

@@ -5,7 +5,7 @@
 
 	if(isset($_GET['area'])){
 		switch ($_GET['area']) {
-			//REQUEST FOR DETAIL OF A USER
+			//REQUEST FOR DETAIL OF A CAR
 			//Example for request: http://[URL]/api.php?area=detail&id=5
 			case 'detail':{
 				$car = getCarById($_GET['id']);
@@ -19,7 +19,7 @@
 
 			}break;
 
-			//REQUEST FOR DELETEING A USER - MUST USE TYPE DELETE ON REQUEST 
+			//REQUEST FOR DELETEING A CAR - MUST USE TYPE DELETE ON REQUEST 
 			//Example for request: http://[URL]/api.php?area=delete
 			case 'delete': {
 
@@ -52,7 +52,7 @@
 
 			} break;
 
-			// REQUEST FOR UPDATING A USER
+			// REQUEST FOR UPDATING A CAR
 			// Example for request: http://[URL]/api.php?area=update
 			case 'update': {
 
@@ -103,7 +103,7 @@
 
 			} break;
 
-			//REQUEST FOR INSERTING A USER
+			//REQUEST FOR INSERTING A CAR
 			//Example for request: http://[URL]/api.php?area=insert
 			case 'insert': {
 
@@ -130,7 +130,7 @@
 
 			} break;
 
-			// REQUEST FOR GETTING ALL USERS
+			// REQUEST FOR GETTING ALL CARS
 			//Example for request: http://[URL/api.php?area=allCars
 			case 'allCars' : {
 				$users = getAllCars();

@@ -4,7 +4,7 @@
 This is a possible solution for the Cartrack Tech challenge
 
 ## requirements
-- XAMPP (or any other Apache,PHP), PostgresQL Server(9.5) 
+- XAMPP (or any other Apache,PHP), PostgresQL Server
 - Postman
 
 ## usage

@@ -1,18 +1,18 @@
 # Cartrack tech challenge
 
-## scope
+## Scope
 This is a possible solution for the Cartrack Tech challenge
 
-## requirements
+## Requirements
 - XAMPP (or any other Apache,PHP), PostgresQL Server, if you want to use your own server
 - Postman
 
-## usage
+## Usage
 - import the postman request colection
 - import the postman enviroment
 - In the postman enviroment set up the URL property to your own URL
 
-## requests available
+## Requests available
 
 ### List the cars :
   - URL: http://[URL]/api.php?area=allCars

@@ -24,7 +24,7 @@ This is a possible solution for the Cartrack Tech challenge
   - Method: GET
 
 ### Insert a user : 
-  - URL: http://[URL/api.php?area=insert
+  - URL: http://[URL]/api.php?area=insert
   - Method : POST
   
   - Request body:
@@ -38,7 +38,7 @@ This is a possible solution for the Cartrack Tech challenge
 ```
 
 ### Update a user : 
-  - URL: http://[URL/api.php?area=update
+  - URL: http://[URL]/api.php?area=update
   - Method : PUT
   
   - Request body:
@@ -53,7 +53,7 @@ This is a possible solution for the Cartrack Tech challenge
 ```
 
 ### Delete a user : 
-  - URL: http://[URL/api.php?area=delete
+  - URL: http://[URL]/api.php?area=delete
   - Method : DELETE
   
   - Request body:

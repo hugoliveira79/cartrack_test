@@ -1,4 +1,4 @@
-# cartrack_test
+# Cartrack tech challenge
 
 ## scope
 This is a possible solution for the Cartrack Tech challenge
@@ -8,22 +8,21 @@ This is a possible solution for the Cartrack Tech challenge
 - Postman
 
 ## usage
-- Import de database backup file into your postgres server
 - import the postman request colection
 - import the postman enviroment
 - In the postman enviroment set up the URL property to your own URL
 
 ## requests available
 
-### List the users :
-  - URL: http://[URL]/api.php?area=allUsers
+### List the cars :
+  - URL: http://[URL]/api.php?area=allCars
   - Method: GET
 
-### Get a detail of a user:
-  - URL: http://[URL]/api.php?id=5 
+### Get a detail of a car:
+  - URL: http://[URL]/api.php?area=detail&id=5 
   - Method: GET
 
-### Insert a user : 
+### Insert a car : 
   - URL: http://[URL]/api.php?area=insert
   - Method : POST
   
@@ -31,13 +30,14 @@ This is a possible solution for the Cartrack Tech challenge
 
 ```json
 {
-    "name" : "John Smith",
-    "address" : "New York"
+    "model" : "Senna",
+    "type" : "Race",
+    "brand" : "McLaren",
+    "year" : "1992"
 }
-
 ```
 
-### Update a user : 
+### Update a car : 
   - URL: http://[URL]/api.php?area=update
   - Method : PUT
   
@@ -45,14 +45,16 @@ This is a possible solution for the Cartrack Tech challenge
 
 ```json
 {
-    "id":34,
-    "name" : "John Smith",
-    "address" : "Miami"
+    "id": 32,
+    "model" : "Senna2",
+    "type" : "Racing",
+    "brand" : "McLarens",
+    "year" : "1993"
 }
 
 ```
 
-### Delete a user : 
+### Delete a car : 
   - URL: http://[URL]/api.php?area=delete
   - Method : DELETE
   

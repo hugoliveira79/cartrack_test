@@ -6,7 +6,7 @@
 	if(isset($_GET['area'])){
 		switch ($_GET['area']) {
 			//REQUEST FOR DETAIL OF A USER
-			//Example for request: http://[URL]/api.php?id=5
+			//Example for request: http://[URL]/api.php?area=detail&id=5
 			case 'detail':{
 				$user = getUserById($_GET['id']);
 
@@ -93,7 +93,7 @@
 			} break;
 
 			//REQUEST FOR INSERTING A USER
-			//Example for request: http://[URL/api.php?area=insert
+			//Example for request: http://[URL]/api.php?area=insert
 			case 'insert': {
 
 				if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST)) {

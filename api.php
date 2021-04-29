@@ -46,10 +46,8 @@
 				} else {
 					$message['message'] = "wrong request type or params missing";
 				}
-
 	    		
 	    		echo json_encode($message);
-
 			} break;
 
 			// REQUEST FOR UPDATING A CAR
@@ -100,7 +98,6 @@
 				}
 
 	    		echo json_encode($message);
-
 			} break;
 
 			//REQUEST FOR INSERTING A CAR
@@ -127,7 +124,6 @@
 				}
 
     			echo json_encode($message);
-
 			} break;
 
 			// REQUEST FOR GETTING ALL CARS
@@ -140,15 +136,11 @@
 
 				}
 
-
 				echo json_encode($users);
-
 			} break;
 			
 			default: {
 				$message['message'] = "Something went wrong";
-
-				
 			} break;
 		}
 

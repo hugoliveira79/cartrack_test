@@ -1,20 +1,20 @@
 <?php
 
 	require_once('config.php');
-	require_once('Users/Controller.php');
+	require_once('Cars/Controller.php');
 
 	if(isset($_GET['area'])){
 		switch ($_GET['area']) {
 			//REQUEST FOR DETAIL OF A USER
 			//Example for request: http://[URL]/api.php?area=detail&id=5
 			case 'detail':{
-				$user = getUserById($_GET['id']);
+				$car = getCarById($_GET['id']);
 
-				if (!is_object($user) ){
-						$message['message'] = "user not found";
+				if (!is_object($car) ){
+						$message['message'] = "car not found";
 						echo json_encode($message);
 					} else {
-    					echo str_replace('\\u0000', "",json_encode((array)$user));
+    					echo str_replace('\\u0000', "",json_encode((array)$car));
 					}
 
 			}break;
@@ -33,7 +33,7 @@
 
 					} else {
 
-						$user = getUserById($data->id);
+						$user = getCarById($data->id);
 							
 						if (!is_object($user) ){
 							$message['message'] = "user not found";
@@ -64,21 +64,32 @@
 						$message['message'] = "No id present in body";
 					} else {
 
-						$user = getUserById($data->id);
+						$car = getCarById($data->id);
 
-						if (!is_object($user) ){
-							$message['message'] = "user not found";
+						if (!is_object($car) ){
+							$message['message'] = "car not found";
 						} else {
 
-							if (isset($data->name)) {
-								$user->setName($data->name);
+							if (isset($data->model)) {
+								$car->setModelName($data->model);
 							}
 
-							if (isset($data->address)) {
-								$user->setAddress($data->address);
+							if (isset($data->type)) {
+								$car->setModelType($data->type);
 							}
 
-							$result = $user->update();
+
+							if (isset($data->brand)) {
+								$car->setModelBrand($data->brand);
+							}
+
+							if (isset($data->year)) {
+								$car->setModelYear($data->year);
+							}
+
+							$car->setModelModelDateModified(date('Y-m-d h:i:s'));
+
+							$result = $car->update();
 							$message['message'] = $result;
 						}
 
@@ -105,8 +116,9 @@
 						$message['message'] = "params missing";
 
 					} else {
-						$user = new User(null,$data->name,$data->address );
-						$result = $user->save();
+
+						$car = new Car(null,$data->model,$data->type, $data->brand, $data->year, date('Y-m-d h:i:s'), null);
+						$result = $car->save();
 						$message['message'] =$result;
 					}
 					
@@ -119,9 +131,9 @@
 			} break;
 
 			// REQUEST FOR GETTING ALL USERS
-			//Example for request: http://[URL/api.php?area=allUsers
-			case 'allUsers' : {
-				$users = getAllUsers();
+			//Example for request: http://[URL/api.php?area=allCars
+			case 'allCars' : {
+				$users = getAllCars();
 
 				for ($i=0; $i<count($users);$i++){
 					$users[$i]= json_decode(str_replace('\\u0000', "",json_encode((array)$users[$i])));

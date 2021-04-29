@@ -6,7 +6,30 @@
 	},
 	"item": [
 		{
-			"name": "GET_USER_DETAIL",
+			"name": "GET_ALL_CARS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api.php?area=allCars",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "area",
+							"value": "allCars"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_CAR_DETAIL",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -23,7 +46,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/api.php?area=detail&id=34",
+					"raw": "{{URL}}/api.php?area=detail&id=13",
 					"host": [
 						"{{URL}}"
 					],
@@ -37,7 +60,7 @@
 						},
 						{
 							"key": "id",
-							"value": "34"
+							"value": "13"
 						}
 					]
 				}
@@ -45,13 +68,13 @@
 			"response": []
 		},
 		{
-			"name": "INSERT_USER_DETAIL",
+			"name": "INSERT_CAR_DETAIL",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\" : \"Ana Saraiva\",\r\n    \"address\" : \"Almada\"\r\n}",
+					"raw": "{\r\n    \"model\" : \"Senna\",\r\n    \"type\" : \"Race\",\r\n    \"brand\" : \"McLaren\",\r\n    \"year\" : \"1992\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -77,13 +100,13 @@
 			"response": []
 		},
 		{
-			"name": "DELETE_USER_DETAIL",
+			"name": "DELETE_CAR_DETAIL",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\" : 33\r\n    \r\n}"
+					"raw": "{\r\n    \"id\" : 31\r\n}"
 				},
 				"url": {
 					"raw": "{{URL}}/api.php?area=delete",
@@ -104,13 +127,13 @@
 			"response": []
 		},
 		{
-			"name": "UPDATE_USER_DETAIL",
+			"name": "UPDATE_CAR_DETAIL",
 			"request": {
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\":34,\r\n    \"name\" : \"John Smith\",\r\n    \"address\" : \"Miami\"\r\n}"
+					"raw": "{\r\n    \"id\": 32,\r\n    \"model\" : \"Senna2\",\r\n    \"type\" : \"Racing\",\r\n    \"brand\" : \"McLarens\",\r\n    \"year\" : \"1993\"\r\n}"
 				},
 				"url": {
 					"raw": "{{URL}}/api.php?area=update",
@@ -124,29 +147,6 @@
 						{
 							"key": "area",
 							"value": "update"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET_ALL_USERS",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{URL}}/api.php?area=allUsers",
-					"host": [
-						"{{URL}}"
-					],
-					"path": [
-						"api.php"
-					],
-					"query": [
-						{
-							"key": "area",
-							"value": "allUsers"
 						}
 					]
 				}

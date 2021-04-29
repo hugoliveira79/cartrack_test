@@ -8,22 +8,21 @@ This is a possible solution for the Cartrack Tech challenge
 - Postman
 
 ## usage
-- Import de database backup file into your postgres server
 - import the postman request colection
 - import the postman enviroment
 - In the postman enviroment set up the URL property to your own URL
 
 ## requests available
 
-### List the users :
-  - URL: http://[URL]/api.php?area=allUsers
+### List the cars :
+  - URL: http://[URL]/api.php?area=allCars
   - Method: GET
 
-### Get a detail of a user:
-  - URL: http://[URL]/api.php?id=5 
+### Get a detail of a car:
+  - URL: http://[URL]/api.php?area=detail&id=5 
   - Method: GET
 
-### Insert a user : 
+### Insert a car : 
   - URL: http://[URL]/api.php?area=insert
   - Method : POST
   
@@ -37,7 +36,7 @@ This is a possible solution for the Cartrack Tech challenge
 
 ```
 
-### Update a user : 
+### Update a car : 
   - URL: http://[URL]/api.php?area=update
   - Method : PUT
   
@@ -52,7 +51,7 @@ This is a possible solution for the Cartrack Tech challenge
 
 ```
 
-### Delete a user : 
+### Delete a ucar : 
   - URL: http://[URL]/api.php?area=delete
   - Method : DELETE
   

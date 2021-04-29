@@ -30,10 +30,11 @@ This is a possible solution for the Cartrack Tech challenge
 
 ```json
 {
-    "name" : "John Smith",
-    "address" : "New York"
+    "model" : "Senna",
+    "type" : "Race",
+    "brand" : "McLaren",
+    "year" : "1992"
 }
-
 ```
 
 ### Update a car : 
@@ -44,14 +45,16 @@ This is a possible solution for the Cartrack Tech challenge
 
 ```json
 {
-    "id":34,
-    "name" : "John Smith",
-    "address" : "Miami"
+    "id": 32,
+    "model" : "Senna2",
+    "type" : "Racing",
+    "brand" : "McLarens",
+    "year" : "1993"
 }
 
 ```
 
-### Delete a ucar : 
+### Delete a car : 
   - URL: http://[URL]/api.php?area=delete
   - Method : DELETE
   

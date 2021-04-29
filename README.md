@@ -10,7 +10,7 @@ This is a possible solution for the Cartrack Tech challenge
 ## Usage
 - import the postman request colection
 - import the postman enviroment
-- In the postman enviroment set up the URL property to your own URL
+- In the postman enviroment set up the URL property to your own URL, if you are using your own server
 
 ## Requests available
 

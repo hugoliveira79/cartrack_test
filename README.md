@@ -1,5 +1,8 @@
 # Cartrack tech challenge
 
+## NOTE!!!
+This is a demo, purposely unfinished test to show recruters some skills, without revealing all the code. 
+
 ## Scope
 This is a possible solution for the Cartrack Tech challenge
 
